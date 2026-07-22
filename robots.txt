@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /src/
+Allow: /assets/images/
+
+Sitemap: https://casaruralencinal.es/sitemap.xml
+
+# Reglas específicas para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Reglas específicas para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
