@@ -1340,7 +1340,7 @@ section {
     }
 
     .hero {
-        height: 400px;
+        height: 500px;
         margin-top: -3rem;
     }
 
@@ -1350,7 +1350,7 @@ section {
     }
 
     .hero-content p {
-        font-size: 1rem;
+        display: none;
     }
 
     .hero-location {
@@ -1394,6 +1394,16 @@ section {
     .actividades-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Modal en tablet */
+    .modal-content {
+        max-width: 95vw;
+        max-height: 92vh;
+    }
+
+    .modal-content img {
+        max-height: 90vh;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1419,7 +1429,7 @@ section {
     }
 
     .hero {
-        height: 300px;
+        height: 380px;
         margin-top: -2rem;
     }
 
@@ -1429,7 +1439,23 @@ section {
     }
 
     .hero-content p {
-        font-size: 0.9rem;
+        display: none;
+    }
+
+    /* Modal en móvil pequeño */
+    .modal-content {
+        max-width: 98vw;
+        max-height: 95vh;
+    }
+
+    .modal-content img {
+        max-height: 94vh;
+    }
+
+    .modal-nav {
+        width: 48px;
+        height: 48px;
+        font-size: 2rem;
     }
 
     .hero-location {
