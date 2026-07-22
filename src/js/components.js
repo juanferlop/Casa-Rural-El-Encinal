@@ -51,11 +51,19 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Síguenos</h4>
+                    <h4>Sitios de Interés</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">TripAdvisor</a></li>
+                        <li><a href="https://www.ancares.org" target="_blank" rel="noopener">Reserva Ancares</a></li>
+                        <li><a href="https://www.turismodelbierzo.es" target="_blank" rel="noopener">Turismo Bierzo</a></li>
+                        <li><a href="https://www.vinosdelbierzo.es" target="_blank" rel="noopener">Vinos DO Bierzo</a></li>
+                        <li><a href="https://castillodelostemplarios.com/" target="_blank" rel="noopener">Castillo Templarios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
                     </ul>
                 </div>
             </div>

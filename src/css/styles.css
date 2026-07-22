@@ -834,6 +834,118 @@ section {
     font-weight: 700;
 }
 
+/* ==================== LUGARES - ¿QUE VER? ==================== */
+.lugares-section {
+    background: var(--white);
+    padding: 5rem 0;
+}
+
+.lugares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.lugar-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    overflow: hidden;
+    border-bottom: 4px solid var(--accent-color);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.lugar-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.lugar-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.lugar-content {
+    padding: 1.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.lugar-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.lugar-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ==================== ¿QUE HACER? / ACTIVIDADES ==================== */
+.actividades-hacer {
+    background: linear-gradient(135deg, #F5F1E8, #FFF8DC);
+    padding: 5rem 0;
+}
+
+.hacer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.hacer-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    overflow: hidden;
+    border-bottom: 4px solid var(--tertiary-color);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.hacer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.hacer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.hacer-content {
+    padding: 1.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hacer-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.hacer-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
 /* ==================== GASTRONOMÍA ==================== */
 .gastronomia-section {
     background: linear-gradient(135deg, #FFF8DC, #F5F1E8);
@@ -850,13 +962,29 @@ section {
 .gastro-item {
     background: var(--white);
     border-radius: 12px;
-    padding: 1.8rem;
     box-shadow: 0 4px 16px rgba(0,0,0,0.07);
     border-bottom: 4px solid var(--secondary-color);
     transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.gastro-item:hover { transform: translateY(-5px); }
+.gastro-item:hover { 
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.gastro-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.gastro-content {
+    padding: 1.5rem;
+}
 
 .gastro-emoji {
     font-size: 2.8rem;
@@ -865,15 +993,17 @@ section {
 
 .gastro-item h3 {
     color: var(--primary-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
 .gastro-item p {
     color: #666;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 /* ==================== EVENTOS ==================== */
@@ -2246,5 +2376,237 @@ a:not(.nav-link):not(.btn-contacto):not(.footer-link):not([class*="btn-"]):not(.
 
     .nav-link {
         font-size: 0.85rem;
+    }
+}
+
+/* ==================== BANNER DE COOKIES ==================== */
+.cookies-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--primary-color), #2a2a2a);
+    color: var(--white);
+    padding: 1.5rem;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transform: translateY(150%);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.cookies-banner.show {
+    transform: translateY(0);
+}
+
+.cookies-banner.hidden {
+    transform: translateY(150%);
+}
+
+.cookies-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cookies-text {
+    flex: 1;
+}
+
+.cookies-text h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.cookies-text p {
+    font-size: 0.95rem;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.cookies-text a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cookies-text a:hover {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+.cookies-buttons {
+    display: flex;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+.cookies-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.cookies-btn-accept {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.cookies-btn-accept:hover {
+    background: var(--white);
+    transform: scale(1.05);
+}
+
+.cookies-btn-reject {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.cookies-btn-reject:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Media queries para Lugares y Actividades */
+@media (max-width: 768px) {
+    .lugares-grid,
+    .hacer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .lugar-card,
+    .hacer-card {
+        border-radius: 10px;
+    }
+
+    .lugar-card img,
+    .hacer-card img {
+        height: 160px;
+    }
+
+    .lugar-content,
+    .hacer-content {
+        padding: 1.2rem;
+    }
+
+    .lugar-card h3,
+    .hacer-card h3 {
+        font-size: 1.05rem;
+    }
+
+    .lugar-card p,
+    .hacer-card p {
+        font-size: 0.9rem;
+    }
+
+    .zona-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gastro-item img {
+        height: 150px;
+    }
+
+    .gastro-item h3 {
+        font-size: 1.1rem;
+        padding: 1.2rem 1.2rem 0 1.2rem;
+    }
+
+    .gastro-item p {
+        font-size: 0.9rem;
+        padding: 0 1.2rem 1.2rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lugares-grid,
+    .hacer-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .lugar-card,
+    .hacer-card {
+        border-radius: 8px;
+    }
+
+    .lugar-card img,
+    .hacer-card img {
+        height: 140px;
+    }
+
+    .lugar-content,
+    .hacer-content {
+        padding: 1rem;
+    }
+
+    .lugar-card h3,
+    .hacer-card h3 {
+        font-size: 1rem;
+    }
+
+    .lugar-card p,
+    .hacer-card p {
+        font-size: 0.85rem;
+    }
+
+    .zona-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gastro-item img {
+        height: 130px;
+    }
+
+    .gastro-item h3 {
+        font-size: 1rem;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .gastro-item p {
+        font-size: 0.8rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .cookies-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .cookies-text {
+        width: 100%;
+    }
+
+    .cookies-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cookies-btn {
+        width: 100%;
+    }
+
+    .cookies-text h4 {
+        font-size: 1rem;
+    }
+
+    .cookies-text p {
+        font-size: 0.9rem;
     }
 }
