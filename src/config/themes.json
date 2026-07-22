@@ -1,0 +1,57 @@
+{
+    "themes": {
+        "gris-cobre": {
+            "name": "Gris + Cobre Moderno",
+            "description": "Paleta minimalista moderna con grises y acentos de cobre",
+            "primary": "#1F1F1F",
+            "secondary": "#B8860B",
+            "accent": "#D4A574",
+            "light-bg": "#FAFAF8",
+            "white": "#FFFFFF",
+            "border": "#E8E3DB",
+            "gradient-main": "linear-gradient(135deg, #2A2A2A 0%, #1F1F1F 50%, #3A3A3A 100%)",
+            "gradient-hover": "linear-gradient(135deg, #353535 0%, #2A2A2A 50%, #454545 100%)",
+            "shine": "inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.3)"
+        },
+        "azul-purpura": {
+            "name": "Azul-Púrpura Elegante",
+            "description": "Degradado minimalista moderno azul-púrpura",
+            "primary": "#1a1f3a",
+            "secondary": "#6B4C9A",
+            "accent": "#9B7EC4",
+            "light-bg": "#FAFAF8",
+            "white": "#FFFFFF",
+            "border": "#E8E3DB",
+            "gradient-main": "linear-gradient(135deg, #3d2d5c 0%, #2a1e45 50%, #4a3a6b 100%)",
+            "gradient-hover": "linear-gradient(135deg, #4d3d6c 0%, #3a2e55 50%, #5a4a7b 100%)",
+            "shine": "inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.3)"
+        },
+        "blanco-negro": {
+            "name": "Blanco-Negro Minimalista",
+            "description": "Diseño limpio y minimalista con contraste puro",
+            "primary": "#1a1a1a",
+            "secondary": "#4a4a4a",
+            "accent": "#6b6b6b",
+            "light-bg": "#FAFAF8",
+            "white": "#FFFFFF",
+            "border": "#D0D0D0",
+            "gradient-main": "linear-gradient(135deg, #2a2a2a 0%, #0f0f0f 50%, #3a3a3a 100%)",
+            "gradient-hover": "linear-gradient(135deg, #3a3a3a 0%, #1f1f1f 50%, #4a4a4a 100%)",
+            "shine": "inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -2px 0 rgba(0, 0, 0, 0.4)"
+        },
+        "naranja-coral": {
+            "name": "Naranja-Coral Moderno",
+            "description": "Paleta cálida con degradado naranja-coral sofisticado",
+            "primary": "#2a1810",
+            "secondary": "#D97706",
+            "accent": "#EA8C55",
+            "light-bg": "#FAFAF8",
+            "white": "#FFFFFF",
+            "border": "#E8E3DB",
+            "gradient-main": "linear-gradient(135deg, #c45a1a 0%, #a43a0a 50%, #d47535 100%)",
+            "gradient-hover": "linear-gradient(135deg, #d56a2a 0%, #b54a1a 50%, #e48545 100%)",
+            "shine": "inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.3)"
+        }
+    },
+    "current": "gris-cobre"
+}

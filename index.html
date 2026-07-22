@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casa Rural El Encinal - Alojamiento rural único en Moreda, El Bierzo, León. Casa completa para 6 personas con acceso a naturaleza, senderismo y gastronomía local. ¡Reserva tu experiencia!">
+    <meta name="keywords" content="casa rural, El Bierzo, León, alojamiento rural, Moreda, Ancares, naturaleza, senderismo, turismo rural">
+    <meta name="author" content="Casa Rural El Encinal">
+    <meta property="og:title" content="Casa Rural El Encinal | Alojamiento en El Bierzo">
+    <meta property="og:description" content="Descubre nuestro alojamiento rural en el corazón del El Bierzo. Casa completa para 6 personas con vistas a la naturaleza.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/casa-grande/WhatsApp%20Image%202026-07-21%20at%2020.52.35.jpeg">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>Casa Rural El Encinal | Alojamiento Único en El Bierzo</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    
+    <!-- Tema - Se ejecuta ANTES del CSS -->
+    <script>
+    (function() {
+        const themes = {
+            "gris-cobre": {
+                "name": "Gris + Cobre Moderno",
+                "primary": "#1F1F1F",
+                "secondary": "#B8860B",
+                "accent": "#D4A574",
+                "tertiary": "#6B8C6F",
+                "light-bg": "#FAFAF8",
+                "white": "#FFFFFF",
+                "border": "#E8E3DB",
+                "gradient-main": "linear-gradient(135deg, #2A2A2A 0%, #1F1F1F 50%, #3A3A3A 100%)",
+                "gradient-hover": "linear-gradient(135deg, #353535 0%, #2A2A2A 50%, #454545 100%)",
+                "shine": "inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.3)"
+            }
+        };
+        const theme = themes["gris-cobre"];
+        document.documentElement.style.setProperty('--primary-color', theme.primary);
+        document.documentElement.style.setProperty('--secondary-color', theme.secondary);
+        document.documentElement.style.setProperty('--accent-color', theme.accent);
+        document.documentElement.style.setProperty('--tertiary-color', theme.tertiary);
+        document.documentElement.style.setProperty('--light-bg', theme['light-bg']);
+        document.documentElement.style.setProperty('--white', theme.white);
+        document.documentElement.style.setProperty('--border-color', theme.border);
+        document.documentElement.style.setProperty('--gradient-metallic', theme['gradient-main']);
+        document.documentElement.style.setProperty('--gradient-metallic-hover', theme['gradient-hover']);
+        document.documentElement.style.setProperty('--shine-effect', theme.shine);
+    })();
+    </script>
+    
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <div id="header-placeholder"></div>
+
+    <!-- Sección Hero con Carrusel -->
+    <section id="inicio" class="hero">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide active" style="background-image: url('assets/images/casa-grande/WhatsApp%20Image%202026-07-21%20at%2021.00.02.jpeg')"></div>
+                <div class="carousel-slide" style="background-image: url('assets/images/casa-grande/WhatsApp%20Image%202026-07-21%20at%2020.52.58.jpeg')"></div>
+                <div class="carousel-slide" style="background-image: url('assets/images/casa-grande/WhatsApp%20Image%202026-07-21%20at%2020.53.32.jpeg')"></div>
+                <div class="carousel-slide" style="background-image: url('assets/images/casa-grande/WhatsApp%20Image%202026-07-21%20at%2020.53.56.jpeg')"></div>
+                <div class="carousel-slide" style="background-image: url('assets/images/casa-grande/WhatsApp%20Image%202026-07-21%20at%2020.54.40.jpeg')"></div>
+            </div>
+            <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+            <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h2>El Encinal</h2>
+                <p>Tu refugio en el corazón del El Bierzo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Destacados -->
+    <section class="destacados">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegir Casa Rural El Encinal?</h2>
+            <p class="section-subtitle">Tu refugio perfecto en el corazón del El Bierzo</p>
+            
+            <div class="destacados-grid">
+                <div class="destaque-card">
+                    <div class="destaque-icon">🏡</div>
+                    <h3>Casa Completa</h3>
+                    <p>Alojamiento exclusivo para tu grupo. 6 personas máximo, totalmente equipada con chimenea y patio privado.</p>
+                </div>
+                
+                <div class="destaque-card">
+                    <div class="destaque-icon">🗻</div>
+                    <h3>Naturaleza Pura</h3>
+                    <p>Ubicada en la Reserva de los Ancares, rodeada de bosques, montañas y paisajes de ensueño.</p>
+                </div>
+                
+                <div class="destaque-card">
+                    <div class="destaque-icon">🍽️</div>
+                    <h3>Gastronomía Local</h3>
+                    <p>Explora la cocina berciana: vinos DO Bierzo, botillo, cecina y productos de la tierra.</p>
+                </div>
+                
+                <div class="destaque-card">
+                    <div class="destaque-icon">🎯</div>
+                    <h3>Actividades</h3>
+                    <p>Senderismo, fotografía, cicloturismo, patrimonio cultural y experiencias inolvidables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+
+    <script src="src/js/theme-manager.js"></script>
+    <script src="src/js/components.js"></script>
+    <script src="src/js/carousel.js"></script>
+    <script src="src/js/main.js"></script>

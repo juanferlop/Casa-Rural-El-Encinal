@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería fotográfica de Casa Rural El Encinal. Explora todas las habitaciones, espacios comunes y vistas panorámicas de nuestra casa en Moreda, Bierzo.">
+    <meta name="keywords" content="galería, fotos casa rural, imágenes alojamiento, Bierzo, León, turismo rural">
+    <meta name="author" content="Casa Rural El Encinal">
+    <meta property="og:title" content="Galería de Fotos | Casa Rural El Encinal">
+    <meta property="og:description" content="Descubre todos los espacios y detalles de nuestra casa rural en el Bierzo a través de nuestras fotos.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>Galería de Fotos | Casa Rural El Encinal</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">    
+    <!-- Tema - Se ejecuta ANTES del CSS -->
+    <script>
+    (function() {
+        const themes = {
+            "gris-cobre": {
+                "name": "Gris + Cobre Moderno",
+                "primary": "#1F1F1F",
+                "secondary": "#B8860B",
+                "accent": "#D4A574",
+                "tertiary": "#6B8C6F",
+                "light-bg": "#FAFAF8",
+                "white": "#FFFFFF",
+                "border": "#E8E3DB",
+                "gradient-main": "linear-gradient(135deg, #2A2A2A 0%, #1F1F1F 50%, #3A3A3A 100%)",
+                "gradient-hover": "linear-gradient(135deg, #353535 0%, #2A2A2A 50%, #454545 100%)",
+                "shine": "inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.3)"
+            }
+        };
+        const theme = themes["gris-cobre"];
+        document.documentElement.style.setProperty('--primary-color', theme.primary);
+        document.documentElement.style.setProperty('--secondary-color', theme.secondary);
+        document.documentElement.style.setProperty('--accent-color', theme.accent);
+        document.documentElement.style.setProperty('--tertiary-color', theme.tertiary);
+        document.documentElement.style.setProperty('--light-bg', theme['light-bg']);
+        document.documentElement.style.setProperty('--white', theme.white);
+        document.documentElement.style.setProperty('--border-color', theme.border);
+        document.documentElement.style.setProperty('--gradient-metallic', theme['gradient-main']);
+        document.documentElement.style.setProperty('--gradient-metallic-hover', theme['gradient-hover']);
+        document.documentElement.style.setProperty('--shine-effect', theme.shine);
+    })();
+    </script>
+        <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <div id="header-placeholder"></div>
+
+
+
+    <!-- Sección Galería -->
+    <section class="galeria">
+        <div class="container">
+            <h1 class="section-title">Galería de Fotos</h1>
+            <p class="section-subtitle">Descubre todos los espacios de nuestra casa</p>
+
+            <div class="galeria-grid" id="galeria-grid">
+                <!-- Generado dinámicamente por JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Galería -->
+    <div id="galeria-modal" class="modal">
+        <span class="modal-close" onclick="cerrarModal()">&times;</span>
+        <button class="modal-nav modal-prev" onclick="irImagenAnterior()">&#8249;</button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <p id="modal-caption"></p>
+        </div>
+        <button class="modal-nav modal-next" onclick="irProximaImagen()">&#8250;</button>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script src="src/js/theme-manager.js"></script>
+    <script src="src/js/components.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/galeria.js"></script>
+</body>
+</html>
