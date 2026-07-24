@@ -1741,7 +1741,10 @@ section {
     }
 
     .hero-content p {
-        display: none;
+        display: block;
+        font-size: 0.85rem;
+        max-width: 320px;
+        margin: 0 auto 1rem;
     }
 
     .hero-location {
@@ -1792,14 +1795,27 @@ section {
         max-height: 92vh;
     }
 
-    .modal-content img {
+    .modal-content-image {
         max-height: 90vh;
     }
-}
 
-@media (max-width: 480px) {
-    .nav-container {
-        gap: 0.5rem;
+    .modal-close {
+        top: 12px;
+        right: 12px;
+    }
+    
+    .modal-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+
+    .modal-prev {
+        left: 12px;
+    }
+
+    .modal-next {
+        right: 12px;
     }
 
     .nav-menu {
@@ -1830,7 +1846,10 @@ section {
     }
 
     .hero-content p {
-        display: none;
+        display: block;
+        font-size: 0.8rem;
+        max-width: 280px;
+        margin: 0 auto 1rem;
     }
 
     /* Modal en móvil pequeño */

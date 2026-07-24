@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let allImages = [];
     let currentIndex = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
 
     // Obtener todas las imágenes de la galería
     function initializeGallery() {
@@ -77,6 +79,31 @@ document.addEventListener('DOMContentLoaded', function () {
             closeModal();
         }
     });
+
+    // Swipe horizontal en móvil
+    modal.addEventListener('touchstart', function (e) {
+        if (!modal.classList.contains('active')) return;
+
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    modal.addEventListener('touchend', function (e) {
+        if (!modal.classList.contains('active')) return;
+
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchStartX - touchEndX;
+        const diffY = Math.abs(touchStartY - touchEndY);
+
+        if (Math.abs(diffX) > 50 && diffY < 60) {
+            if (diffX > 0) {
+                showNext();
+            } else {
+                showPrevious();
+            }
+        }
+    }, { passive: true });
 
     // Navegación con teclado
     document.addEventListener('keydown', function (e) {
