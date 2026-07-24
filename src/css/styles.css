@@ -978,32 +978,12 @@ section {
     margin-top: 3rem;
 }
 
-.moreda-featured {
-    position: relative;
-    margin-bottom: 2.5rem;
-    border-radius: 40px 60px 35px 45px / 50px 40px 55px 30px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    cursor: pointer;
-}
-
-.moreda-featured-img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.moreda-featured:hover .moreda-featured-img {
-    transform: scale(1.03);
-}
-
 .moreda-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
+    grid-auto-rows: 280px;
 }
 
 .moreda-photo {
@@ -1011,9 +991,14 @@ section {
     border-radius: 35px 45px 40px 55px / 40px 50px 45px 35px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moreda-photo-vertical {
+    aspect-ratio: 2 / 3;
+    grid-row: span 1.2;
 }
 
 .moreda-photo:hover {
@@ -1155,17 +1140,18 @@ section {
         padding: 2rem 1.5rem;
     }
     
-    .moreda-featured {
-        border-radius: 30px 50px 25px 40px / 40px 35px 45px 25px;
-    }
-    
-    .moreda-featured-img {
-        height: 300px;
-    }
-    
     .moreda-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-auto-rows: 220px;
         gap: 1.2rem;
+    }
+    
+    .moreda-photo {
+        aspect-ratio: 16 / 9;
+    }
+    
+    .moreda-photo-vertical {
+        aspect-ratio: 2 / 3;
     }
     
     .modal-prev {
@@ -1199,22 +1185,18 @@ section {
         font-size: 0.95rem;
     }
     
-    .moreda-featured {
-        border-radius: 25px 40px 20px 35px / 35px 30px 40px 20px;
-        margin-bottom: 1.5rem;
-    }
-    
-    .moreda-featured-img {
-        height: 220px;
-    }
-    
     .moreda-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 180px;
         gap: 1rem;
     }
     
-    .moreda-intro p {
-        font-size: 0.95rem;
+    .moreda-photo {
+        aspect-ratio: 16 / 9;
+    }
+    
+    .moreda-photo-vertical {
+        aspect-ratio: 2 / 3;
     }
     
     .modal-content-image {
