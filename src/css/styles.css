@@ -991,18 +991,18 @@ section {
     border-radius: 35px 45px 40px 55px / 40px 50px 45px 35px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 6;
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .moreda-photo-vertical {
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 3 / 4;
 }
 
 .moreda-photo-large {
     grid-column: span 2;
-    aspect-ratio: auto / 300px;
+    aspect-ratio: auto / 220px;
 }
 
 .moreda-photo:hover {
