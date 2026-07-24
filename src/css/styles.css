@@ -1056,6 +1056,7 @@ section {
     align-items: center;
     justify-content: center;
     animation: slideUp 0.3s ease;
+    touch-action: none;
 }
 
 @keyframes slideUp {
@@ -1091,6 +1092,7 @@ section {
     max-height: 85vh;
     object-fit: contain;
     border-radius: 12px;
+    touch-action: none;
 }
 
 .modal-nav {

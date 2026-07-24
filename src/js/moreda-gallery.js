@@ -7,11 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalNext = document.getElementById('modalNext');
     const currentImageSpan = document.getElementById('currentImage');
     const totalImagesSpan = document.getElementById('totalImages');
+    const modalContent = document.querySelector('.modal-content-image');
 
     let allImages = [];
     let currentIndex = 0;
     let touchStartX = 0;
     let touchStartY = 0;
+    let pointerStartX = 0;
+    let pointerStartY = 0;
 
     // Obtener todas las imágenes de la galería
     function initializeGallery() {
@@ -80,21 +83,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Swipe horizontal en móvil
-    modal.addEventListener('touchstart', function (e) {
-        if (!modal.classList.contains('active')) return;
+    function handleSwipeStart(clientX, clientY) {
+        pointerStartX = clientX;
+        pointerStartY = clientY;
+        touchStartX = clientX;
+        touchStartY = clientY;
+    }
 
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-    }, { passive: true });
-
-    modal.addEventListener('touchend', function (e) {
-        if (!modal.classList.contains('active')) return;
-
-        const touchEndX = e.changedTouches[0].clientX;
-        const touchEndY = e.changedTouches[0].clientY;
-        const diffX = touchStartX - touchEndX;
-        const diffY = Math.abs(touchStartY - touchEndY);
+    function handleSwipeEnd(clientX, clientY) {
+        const diffX = touchStartX - clientX;
+        const diffY = Math.abs(touchStartY - clientY);
 
         if (Math.abs(diffX) > 50 && diffY < 60) {
             if (diffX > 0) {
@@ -103,7 +101,32 @@ document.addEventListener('DOMContentLoaded', function () {
                 showPrevious();
             }
         }
-    }, { passive: true });
+    }
+
+    // Swipe horizontal en móvil
+    [modal, modalContent, modalImage].forEach(target => {
+        if (!target) return;
+
+        target.addEventListener('touchstart', function (e) {
+            if (!modal.classList.contains('active')) return;
+            handleSwipeStart(e.touches[0].clientX, e.touches[0].clientY);
+        }, { passive: true });
+
+        target.addEventListener('touchend', function (e) {
+            if (!modal.classList.contains('active')) return;
+            handleSwipeEnd(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+        }, { passive: true });
+
+        target.addEventListener('pointerdown', function (e) {
+            if (!modal.classList.contains('active') || e.pointerType !== 'touch') return;
+            handleSwipeStart(e.clientX, e.clientY);
+        });
+
+        target.addEventListener('pointerup', function (e) {
+            if (!modal.classList.contains('active') || e.pointerType !== 'touch') return;
+            handleSwipeEnd(e.clientX, e.clientY);
+        });
+    });
 
     // Navegación con teclado
     document.addEventListener('keydown', function (e) {
