@@ -20,6 +20,7 @@
                     <li><a href="alojamiento.html" class="nav-link">Alojamiento</a></li>
                     <li><a href="galeria.html" class="nav-link">Galería</a></li>
                     <li><a href="actividades.html" class="nav-link">Actividades</a></li>
+                    <li><a href="moreda.html" class="nav-link">El Pueblo</a></li>
                     <li><a href="contacto.html" class="nav-link">Contacto</a></li>
                     <li><a href="tel:625433640" class="nav-link btn-contacto">📞 625433640</a></li>
                 </ul>
@@ -47,6 +48,7 @@
                         <li><a href="alojamiento.html">Alojamiento</a></li>
                         <li><a href="galeria.html">Galería</a></li>
                         <li><a href="actividades.html">Actividades</a></li>
+                        <li><a href="moreda.html">El Pueblo</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>

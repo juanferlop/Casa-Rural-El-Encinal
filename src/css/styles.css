@@ -946,6 +946,288 @@ section {
     line-height: 1.7;
 }
 
+/* ==================== EL PUEBLO - MOREDA ==================== */
+.moreda-section {
+    background: linear-gradient(135deg, #F5F1E8, #FAFAF8);
+    padding: 5rem 0;
+}
+
+.moreda-intro {
+    max-width: 800px;
+    margin: 2rem auto 3rem;
+    text-align: center;
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--accent-color);
+}
+
+.moreda-intro p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.moreda-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.moreda-gallery {
+    margin-top: 3rem;
+}
+
+.moreda-featured {
+    position: relative;
+    margin-bottom: 2.5rem;
+    border-radius: 40px 60px 35px 45px / 50px 40px 55px 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    cursor: pointer;
+}
+
+.moreda-featured-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.moreda-featured:hover .moreda-featured-img {
+    transform: scale(1.03);
+}
+
+.moreda-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.moreda-photo {
+    position: relative;
+    border-radius: 35px 45px 40px 55px / 40px 50px 45px 35px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moreda-photo:hover {
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+.moreda-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.moreda-photo:hover .moreda-img {
+    transform: scale(1.05);
+}
+
+/* Modal para ampliar imágenes */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content-image {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 1001;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    font-size: 2.5rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modal-nav:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.modal-prev {
+    left: -60px;
+}
+
+.modal-next {
+    right: -60px;
+}
+
+.modal-counter {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Responsive Moreda */
+@media (max-width: 768px) {
+    .moreda-intro {
+        margin: 1.5rem auto 2rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .moreda-featured {
+        border-radius: 30px 50px 25px 40px / 40px 35px 45px 25px;
+    }
+    
+    .moreda-featured-img {
+        height: 300px;
+    }
+    
+    .moreda-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+    
+    .modal-prev {
+        left: 10px;
+    }
+    
+    .modal-next {
+        right: 10px;
+    }
+    
+    .modal-close {
+        top: 10px;
+    }
+    
+    .modal-counter {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .moreda-section {
+        padding: 3rem 0;
+    }
+    
+    .moreda-intro {
+        margin: 1rem auto 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .moreda-intro p {
+        font-size: 0.95rem;
+    }
+    
+    .moreda-featured {
+        border-radius: 25px 40px 20px 35px / 35px 30px 40px 20px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .moreda-featured-img {
+        height: 220px;
+    }
+    
+    .moreda-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .moreda-intro p {
+        font-size: 0.95rem;
+    }
+    
+    .modal-content-image {
+        max-height: 90vh;
+    }
+    
+    .modal-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+}
+
 /* ==================== GASTRONOMÍA ==================== */
 .gastronomia-section {
     background: linear-gradient(135deg, #FFF8DC, #F5F1E8);
