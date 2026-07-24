@@ -976,11 +976,11 @@ section {
 
 .moreda-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    max-width: 900px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -993,14 +993,17 @@ section {
     aspect-ratio: 1;
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    height: 250px;
 }
 
 .moreda-photo-vertical {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1;
+    height: 250px;
 }
 
 .moreda-photo-large {
     aspect-ratio: 1;
+    height: 250px;
 }
 
 .moreda-photo:hover {
@@ -1140,13 +1143,14 @@ section {
     
     .moreda-gallery {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-        max-width: 600px;
+        gap: 1rem;
+        max-width: 500px;
     }
     
+    .moreda-photo,
+    .moreda-photo-vertical,
     .moreda-photo-large {
-        grid-column: span 1;
-        aspect-ratio: 1;
+        height: 180px;
     }
     
     .modal-prev {
@@ -1182,12 +1186,14 @@ section {
     
     .moreda-gallery {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.6rem;
+        gap: 0.8rem;
         max-width: 350px;
     }
     
-    .moreda-photo-large {
-        grid-column: span 1;
+    .moreda-photo,
+    .moreda-photo-large,
+    .moreda-photo-vertical {
+        height: 160px;
     }
     
     .modal-content-image {

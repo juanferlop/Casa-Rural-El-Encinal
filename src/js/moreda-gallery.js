@@ -13,17 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Obtener todas las imágenes de la galería
     function initializeGallery() {
-        const featured = document.querySelector('.moreda-featured-img');
-        const gridImages = document.querySelectorAll('.moreda-grid .moreda-img');
+        const galleryImages = document.querySelectorAll('.moreda-gallery .moreda-img');
 
         allImages = [];
 
-        if (featured) {
-            allImages.push(featured.dataset.full);
-        }
-
-        gridImages.forEach(img => {
-            allImages.push(img.dataset.full);
+        galleryImages.forEach(img => {
+            if (img.dataset.full) {
+                allImages.push(img.dataset.full);
+            }
         });
 
         totalImagesSpan.textContent = allImages.length;
@@ -60,18 +57,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Agregar listeners a todas las imágenes
     function attachImageListeners() {
-        const featured = document.querySelector('.moreda-featured');
-        const photos = document.querySelectorAll('.moreda-photo');
-
-        if (featured) {
-            featured.addEventListener('click', function () {
-                openModal(allImages[0], 0);
-            });
-        }
+        const photos = document.querySelectorAll('.moreda-gallery .moreda-photo');
 
         photos.forEach((photo, index) => {
             photo.addEventListener('click', function () {
-                openModal(allImages[index + 1], index + 1);
+                openModal(allImages[index], index);
             });
         });
     }
