@@ -980,10 +980,13 @@ section {
 
 .moreda-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5rem;
     margin-top: 2rem;
     grid-auto-rows: auto;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .moreda-photo {
@@ -991,7 +994,7 @@ section {
     border-radius: 35px 45px 40px 55px / 40px 50px 45px 35px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    aspect-ratio: 16 / 6;
+    aspect-ratio: 1;
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -1001,8 +1004,7 @@ section {
 }
 
 .moreda-photo-large {
-    grid-column: span 2;
-    aspect-ratio: auto / 220px;
+    aspect-ratio: 16 / 9;
 }
 
 .moreda-photo:hover {
@@ -1141,8 +1143,9 @@ section {
     }
     
     .moreda-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1.2rem;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 0.4rem;
+        max-width: 500px;
     }
     
     .moreda-photo-large {
@@ -1182,8 +1185,9 @@ section {
     }
     
     .moreda-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        gap: 0.35rem;
+        max-width: 400px;
     }
     
     .moreda-photo-large {
