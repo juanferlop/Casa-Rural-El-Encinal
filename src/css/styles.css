@@ -978,12 +978,12 @@ section {
     margin-top: 3rem;
 }
 
-.moreda-grid {
+.moreda-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
-    grid-auto-rows: 280px;
+    grid-auto-rows: auto;
 }
 
 .moreda-photo {
@@ -993,17 +993,21 @@ section {
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     aspect-ratio: 16 / 9;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .moreda-photo-vertical {
     aspect-ratio: 2 / 3;
-    grid-row: span 1.2;
+}
+
+.moreda-photo-large {
+    grid-column: span 2;
+    aspect-ratio: auto / 300px;
 }
 
 .moreda-photo:hover {
-    transform: scale(1.08) rotate(-1deg);
     box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+    transform: scale(1.02);
 }
 
 .moreda-img {
@@ -1012,10 +1016,6 @@ section {
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
-}
-
-.moreda-photo:hover .moreda-img {
-    transform: scale(1.05);
 }
 
 /* Modal para ampliar imágenes */
@@ -1140,18 +1140,14 @@ section {
         padding: 2rem 1.5rem;
     }
     
-    .moreda-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        grid-auto-rows: 220px;
+    .moreda-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 1.2rem;
     }
     
-    .moreda-photo {
+    .moreda-photo-large {
+        grid-column: span 1;
         aspect-ratio: 16 / 9;
-    }
-    
-    .moreda-photo-vertical {
-        aspect-ratio: 2 / 3;
     }
     
     .modal-prev {
@@ -1185,18 +1181,13 @@ section {
         font-size: 0.95rem;
     }
     
-    .moreda-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        grid-auto-rows: 180px;
+    .moreda-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 1rem;
     }
     
-    .moreda-photo {
-        aspect-ratio: 16 / 9;
-    }
-    
-    .moreda-photo-vertical {
-        aspect-ratio: 2 / 3;
+    .moreda-photo-large {
+        grid-column: span 1;
     }
     
     .modal-content-image {
